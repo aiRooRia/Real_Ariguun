@@ -1,4 +1,4 @@
-import { ChildComponent } from "./Test";
+import { ChildComponent } from "./Test-Props-DuluuBagsh/Test";
 
 export const Card = () => {
   const userData = [
