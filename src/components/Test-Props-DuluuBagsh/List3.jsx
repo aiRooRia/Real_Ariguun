@@ -1,7 +1,9 @@
-export const SecondComponent = ({ age }) => {
+import { List5 } from "./List5";
+export const List3 = () => {
   return (
     <>
-      <AgeComponent age />
+      <p></p>
+      <List5 />
     </>
   );
 };

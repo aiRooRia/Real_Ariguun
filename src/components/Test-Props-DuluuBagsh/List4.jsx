@@ -1,3 +1,3 @@
-// export const List4 = ({ age }) => {
-//   return <>{age}</>;
-// };
+export const List4 = () => {
+  return <p></p>;
+};

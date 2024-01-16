@@ -27,18 +27,34 @@
 //     </div>
 //   );
 // }
+import { List1 } from "../components/Test-Props-DuluuBagsh/List1";
+import { List2 } from "../components/Test-Props-DuluuBagsh/List2";
+import { List3 } from "../components/Test-Props-DuluuBagsh/List3";
 
-import { List1 } from "../Test-Props-DuluuBagsh/List1";
-// import { List2 } from "../Test-Props-DuluuBagsh/List2";
-// import { List3 } from "../Test-Props-DuluuBagsh/List3";
-const Home = () => {
+const Home = ({ name }) => {
+  const array = [
+    {
+      name: "Duluu",
+      score: "100",
+      lastName: "Bill",
+      age: 121212,
+      work: "Pinecone",
+    },
+    {
+      name: "Dashka",
+      score: "69",
+      lastName: "Bill",
+      age: 121212,
+      work: "Pinecone",
+    },
+  ];
   return (
     <div>
-      <p>
+      {array.map((el) => (
         <List1 />
-      </p>
-      <p>{/* <List2 /> */}</p>
-      <p>{/* <List3 /> */}</p>
+      ))}
+      {/* <List2 />
+      <List3 /> */}
     </div>
   );
 };
