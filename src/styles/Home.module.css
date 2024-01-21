@@ -1,0 +1,13 @@
+.center {
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-Bottom: 200px;
+}
+.flex {
+    display: flex;
+    width: 1400px;
+    flex-wrap: wrap;
+    gap: 20px;
+}

@@ -1,4 +1,6 @@
-export const Card = (props) => {
+import { ChildComponent } from "./Test-Props-DuluuBagsh/Test";
+
+export const Card = () => {
   const userData = [
     {
       id: 553,
@@ -321,21 +323,41 @@ export const Card = (props) => {
   return (
     <>
       {userData.map((el) => (
-        <div style={styles.container}>
-          <div style={styles.center}>
-            <img src={el.avatar} alt="" style={styles.avatar} />
-          </div>
-          <div>
-            <h3>{`${el.first_name} ${el.last_name}`}</h3>
-            <div style={styles.flex}>
-              <p>{el.employment.title}</p>
-              <p>{el.gender}</p>
-            </div>
-            <p>{el.email}</p>
-          </div>
-        </div>
+        <ChildCard
+          avatar={el.avatar}
+          first_name={el.first_name}
+          last_name={el.last_name}
+          employmentTitle={el.employment.title}
+          gender={el.gender}
+          email={el.email}
+        />
       ))}
     </>
+  );
+};
+
+const ChildCard = ({
+  avatar,
+  first_name,
+  last_name,
+  employmentTitle,
+  gender,
+  email,
+}) => {
+  return (
+    <div style={styles.container}>
+      <div style={styles.center}>
+        <img src={avatar} alt="" style={styles.avatar} />
+      </div>
+      <div>
+        <h3>{`${first_name} ${last_name}`}</h3>
+        <div style={styles.flex}>
+          <p>{employmentTitle}</p>
+          <p>{gender}</p>
+        </div>
+        <p>{email}</p>
+      </div>
+    </div>
   );
 };
 
